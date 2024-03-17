@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="bgVideo" class="bgVideo">
+        <source src="Video/Animação fundo.mp4.mp4" type="video/mp4">
+        <!-- Adicione outras fontes do vídeo aqui, se necessário -->
+    </video>
+    <div class="container content">
+        <div class="card-container">
+            <textarea id="inputText" placeholder="Digite seu texto (apenas letras minúsculas)" oninput="convertToLowercase()"></textarea>
+            <div class="button-container">
+                <button id="encryptButton" class="action-button" onclick="encryptText()">Criptografar</button>
+                <button id="decryptButton" class="action-button" onclick="decryptText()">Descriptografar</button>
+                <button id="copyButton" class="action-button" onclick="copyToClipboard()">Copiar Resposta</button>
+            </div>
+            <div id="outputText" class="output-container">
+                <div class="output-label">Palavra Criptografada/Descriptografada:</div>
+                <textarea id="encryptedText" readonly></textarea>
+                <div class="ml4">
+                    <span class="letters letters-1">Usar somente Maiusculas</span>
+                    <span class="letters letters-2">Usar somente Maiusculas</span>
+                    <span class="letters letters-3">Usar somente Maiusculas</span>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
